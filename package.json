@@ -4,7 +4,8 @@
   "description": "2017 Aywas Scav task#64 to create Cookie Clicker game team PsyWhatever user Lassombra#407",
   "main": "index.js",
   "scripts": {
-    "start": "webpack-dev-server"
+    "start": "webpack-dev-server",
+    "build:watch": "webpack --watch"
   },
   "repository": {
     "type": "git",
@@ -31,6 +32,8 @@
   },
   "dependencies": {
     "react": "^15.6.1",
-    "react-dom": "^15.6.1"
+    "react-dom": "^15.6.1",
+    "react-redux": "^5.0.5",
+    "redux": "^3.7.2"
   }
 }
