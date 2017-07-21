@@ -2,4 +2,8 @@
  * Main entry point for application! YAY!
  */
 
-console.log('something happened here!');
+import ReactDom from 'react-dom';
+import React from 'react';
+import App from './App';
+
+ReactDom.render(<App />, document.getElementById('app'));
