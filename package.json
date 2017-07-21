@@ -1,0 +1,32 @@
+{
+  "name": "psywhatevercookie",
+  "version": "1.0.0",
+  "description": "2017 Aywas Scav task#64 to create Cookie Clicker game team PsyWhatever user Lassombra#407",
+  "main": "index.js",
+  "scripts": {
+    "start": "webpack-dev-server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lassombra/PsyWhateverCookie.git"
+  },
+  "author": "Lassombra #407",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lassombra/PsyWhateverCookie/issues"
+  },
+  "homepage": "https://github.com/lassombra/PsyWhateverCookie#readme",
+  "devDependencies": {
+    "babel-core": "^6.25.0",
+    "babel-loader": "^7.1.1",
+    "babel-plugin-transform-decorators": "^6.24.1",
+    "babel-plugin-transform-export-extensions": "^6.22.0",
+    "babel-plugin-transform-function-bind": "^6.22.0",
+    "babel-preset-env": "^1.6.0",
+    "babel-preset-react": "^6.24.1",
+    "babel-preset-stage-2": "^6.24.1",
+    "path": "^0.12.7",
+    "webpack": "^3.3.0",
+    "webpack-dev-server": "^2.5.1"
+  }
+}
