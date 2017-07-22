@@ -1,13 +1,14 @@
 import React from 'react';
 import store from './redux';
 import { Provider } from 'react-redux'
+import Score from './components/score';
 
 export default class App extends React.Component {
 	render() {
 		return <Provider store={store}>
 			<table>
 				<tr>
-					<td colSpan="4">Score: 0</td>
+					<Score />
 				</tr>
 				<tr>
 					<td>Cookie will be here</td>
