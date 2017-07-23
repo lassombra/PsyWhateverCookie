@@ -7,11 +7,12 @@ td {
     border-color: lightgrey;
     border-style: ridge;
     border-spacing: 0;
+    text-align: center;
 }
 .Cookie {
     border: none;
-    background-image: url('images/foodenergy_gingerbreadtitbirdcookie.gif');
-    width: 80px;
-    height: 80px;
+    background-image: url('images/CookieBirb.png');
+    width: 200px;
+    height: 200px;
     cursor: pointer;
 }

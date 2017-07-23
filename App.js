@@ -11,12 +11,12 @@ export default class App extends React.Component {
 			<table>
 				<thead>
 				<tr>
-					<Score />
+					<td colSpan="4"><Cookie/></td>
 				</tr>
 				</thead>
 				<tbody>
 				<tr>
-					<td><Cookie/></td>
+					<td><Score /></td>
 					<td colSpan="2"><UpgradeList /></td>
 					<td><UpgradePurchase /></td>
 				</tr>
