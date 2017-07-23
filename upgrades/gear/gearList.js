@@ -5,7 +5,15 @@ import {connect} from 'react-redux';
 	count: state.upgrades.gear.count
 }))
 export default class GearOwned extends React.Component {
-	render() {
-		return <li className="Gear">{this.props.count}</li>
+	get gearPieces() {
+		return [...this.gearPieceMaker()]
 	}
+	render() {
+		return <li className="Gear">{this.gearPieces}</li>
+	}
+	*gearPieceMaker() {
+		for (let i = 0; i < this.props.count && i < 25; i++) {
+			yield <icon className="Gear__Icon" key={i} />
+		}
+    }
 }
