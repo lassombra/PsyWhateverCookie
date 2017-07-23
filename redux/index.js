@@ -76,3 +76,4 @@ export class Actions {
 		})
 	}
 }
+typeof window !== 'undefined' && window.setInterval(Actions.tick, 1000);

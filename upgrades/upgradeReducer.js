@@ -1,15 +1,18 @@
 import {cost as gearCost, count as gearCount} from './gear';
+import {cost as teamCost, count as teamCount} from './team';
 
 const costMap = {
-	gear: gearCost
+	gear: gearCost,
+	team: teamCost
 };
 export function calc(state, action) {
 	if (action && action.type == 'BUY' || action.type == 'SELL') {
 		let gear = gearCount(state.upgrades.gear.count);
+		let team = teamCount(state.upgrades.team.count);
 		return {
 			...state,
-			perSecondScore: gear.perSecondScore,
-			clickScore: gear.clickScore + 1
+			perSecondScore: gear.perSecondScore + team.perSecondScore,
+			clickScore: gear.clickScore + team.clickScore + 1
 		};
 	} else {
 		return state;
@@ -59,6 +62,9 @@ export function upgradeCount(state = {}, action) {
 		...state,
 		upgrades: {
 			gear: {
+				count: 0
+			},
+			team: {
 				count: 0
 			}
 		}
