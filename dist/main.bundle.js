@@ -24204,13 +24204,13 @@ function reducer() {
 	}
 	if (action.type == 'CLICK') {
 		return _extends({}, state, {
-			currentScore: state.currentScore + state.clickScore,
-			maxScore: state.maxScore + state.clickScore
+			currentScore: state.currentScore + state.clickScore * 100,
+			maxScore: state.maxScore + state.clickScore * 100
 		});
 	} else if (action.type == 'TICK') {
 		return _extends({}, state, {
-			currentScore: state.currentScore + state.perSecondScore,
-			maxScore: state.maxScore + state.perSecondScore
+			currentScore: state.currentScore + state.perSecondScore * 100,
+			maxScore: state.maxScore + state.perSecondScore * 100
 		});
 	} else return state;
 }
@@ -24225,6 +24225,7 @@ function reducer() {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__gear__ = __webpack_require__(53);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__team__ = __webpack_require__(240);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__pendant__ = __webpack_require__(245);
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -24232,6 +24233,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
 
 
 
@@ -24253,7 +24255,8 @@ var Buy = function (_React$Component) {
 				'ul',
 				null,
 				__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1__gear__["a" /* Buy */], null),
-				__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2__team__["a" /* Buy */], null)
+				__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2__team__["a" /* Buy */], null),
+				__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_3__pendant__["a" /* Buy */], null)
 			);
 		}
 	}]);
@@ -25178,6 +25181,7 @@ function count(number) {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__gear__ = __webpack_require__(53);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__team__ = __webpack_require__(240);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__pendant__ = __webpack_require__(245);
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -25185,6 +25189,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
 
 
 
@@ -25206,7 +25211,8 @@ var Owned = function (_React$Component) {
 				'ul',
 				null,
 				__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1__gear__["b" /* List */], null),
-				__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2__team__["b" /* List */], null)
+				__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2__team__["b" /* List */], null),
+				__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_3__pendant__["b" /* List */], null)
 			);
 		}
 	}]);
@@ -25225,6 +25231,7 @@ var Owned = function (_React$Component) {
 /* harmony export (immutable) */ __webpack_exports__["b"] = upgradeCount;
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__gear__ = __webpack_require__(53);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__team__ = __webpack_require__(240);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__pendant__ = __webpack_require__(245);
 var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
@@ -25232,17 +25239,20 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 
 
 
+
 var costMap = {
 	gear: __WEBPACK_IMPORTED_MODULE_0__gear__["c" /* cost */],
-	team: __WEBPACK_IMPORTED_MODULE_1__team__["c" /* cost */]
+	team: __WEBPACK_IMPORTED_MODULE_1__team__["c" /* cost */],
+	pendant: __WEBPACK_IMPORTED_MODULE_2__pendant__["c" /* cost */]
 };
 function calc(state, action) {
 	if (action && action.type == 'BUY' || action.type == 'SELL') {
 		var gear = Object(__WEBPACK_IMPORTED_MODULE_0__gear__["d" /* count */])(state.upgrades.gear.count);
 		var team = Object(__WEBPACK_IMPORTED_MODULE_1__team__["d" /* count */])(state.upgrades.team.count);
+		var pendant = Object(__WEBPACK_IMPORTED_MODULE_2__pendant__["d" /* count */])(state.upgrades.pendant.count);
 		return _extends({}, state, {
-			perSecondScore: gear.perSecondScore + team.perSecondScore,
-			clickScore: gear.clickScore + team.clickScore + 1
+			perSecondScore: gear.perSecondScore + team.perSecondScore + pendant.perSecondScore,
+			clickScore: gear.clickScore + team.clickScore + pendant.clickScore + 1
 		});
 	} else {
 		return state;
@@ -25289,6 +25299,9 @@ function upgradeCount() {
 				count: 0
 			},
 			team: {
+				count: 0
+			},
+			pendant: {
 				count: 0
 			}
 		}
@@ -25530,6 +25543,177 @@ function count(number) {
 	return {
 		perSecondScore: 10 * number,
 		clickScore: 0
+	};
+}
+
+/***/ }),
+/* 244 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (immutable) */ __webpack_exports__["a"] = gearCost;
+function gearCost(count) {
+	return Math.round(100000 * Math.pow(1.1, count), 0);
+}
+
+/***/ }),
+/* 245 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__pendantList__ = __webpack_require__(246);
+/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return __WEBPACK_IMPORTED_MODULE_0__pendantList__["a"]; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__pendantBuy__ = __webpack_require__(247);
+/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return __WEBPACK_IMPORTED_MODULE_1__pendantBuy__["a"]; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__cost__ = __webpack_require__(244);
+/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "c", function() { return __WEBPACK_IMPORTED_MODULE_2__cost__["a"]; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__count__ = __webpack_require__(248);
+/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "d", function() { return __WEBPACK_IMPORTED_MODULE_3__count__["a"]; });
+
+
+
+
+
+
+
+
+
+/***/ }),
+/* 246 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return GearOwned; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(12);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react_redux__ = __webpack_require__(54);
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _dec, _class;
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+
+
+
+var GearOwned = (_dec = Object(__WEBPACK_IMPORTED_MODULE_1_react_redux__["b" /* connect */])(function (state) {
+	return {
+		count: state.upgrades.pendant.count
+	};
+}), _dec(_class = function (_React$Component) {
+	_inherits(GearOwned, _React$Component);
+
+	function GearOwned() {
+		_classCallCheck(this, GearOwned);
+
+		return _possibleConstructorReturn(this, (GearOwned.__proto__ || Object.getPrototypeOf(GearOwned)).apply(this, arguments));
+	}
+
+	_createClass(GearOwned, [{
+		key: 'render',
+		value: function render() {
+			return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+				'li',
+				{ className: 'Pendant' },
+				this.props.count
+			);
+		}
+	}]);
+
+	return GearOwned;
+}(__WEBPACK_IMPORTED_MODULE_0_react___default.a.Component)) || _class);
+
+
+/***/ }),
+/* 247 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return GearBuy; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(12);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react_redux__ = __webpack_require__(54);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__cost__ = __webpack_require__(244);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__redux__ = __webpack_require__(51);
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _dec, _class;
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+
+
+
+
+
+var GearBuy = (_dec = Object(__WEBPACK_IMPORTED_MODULE_1_react_redux__["b" /* connect */])(function (state) {
+	return {
+		count: state.upgrades ? state.upgrades.pendant.count : 0,
+		price: Object(__WEBPACK_IMPORTED_MODULE_2__cost__["a" /* default */])(state.upgrades ? state.upgrades.pendant.count : 0)
+	};
+}), _dec(_class = function (_React$Component) {
+	_inherits(GearBuy, _React$Component);
+
+	function GearBuy() {
+		_classCallCheck(this, GearBuy);
+
+		return _possibleConstructorReturn(this, (GearBuy.__proto__ || Object.getPrototypeOf(GearBuy)).apply(this, arguments));
+	}
+
+	_createClass(GearBuy, [{
+		key: 'render',
+		value: function render() {
+			return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+				'li',
+				{ className: 'TeamPurchase' },
+				__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('img', { src: '' }),
+				' A breeding pendant to help you get more pets to get more cookies.  (Increase cookies per second by 100 and cookies per click by .5 rounded down).  cost: ',
+				this.props.price,
+				' cookies. ',
+				__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+					'button',
+					{ onClick: function onClick() {
+							return __WEBPACK_IMPORTED_MODULE_3__redux__["a" /* Actions */].sell('pendant');
+						} },
+					'-'
+				),
+				' ',
+				this.props.count,
+				' ',
+				__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+					'button',
+					{ onClick: function onClick() {
+							return __WEBPACK_IMPORTED_MODULE_3__redux__["a" /* Actions */].buy('pendant');
+						} },
+					'+'
+				),
+				' '
+			);
+		}
+	}]);
+
+	return GearBuy;
+}(__WEBPACK_IMPORTED_MODULE_0_react___default.a.Component)) || _class);
+
+
+/***/ }),
+/* 248 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (immutable) */ __webpack_exports__["a"] = count;
+function count(number) {
+	return {
+		perSecondScore: 100 * number,
+		clickScore: Math.floor(0.5 * number)
 	};
 }
 
