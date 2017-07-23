@@ -9,14 +9,18 @@ export default class App extends React.Component {
 	render() {
 		return <Provider store={store}>
 			<table>
+				<thead>
 				<tr>
 					<Score />
 				</tr>
+				</thead>
+				<tbody>
 				<tr>
 					<td><Cookie/></td>
 					<td colSpan="2"><UpgradeList /></td>
 					<td><UpgradePurchase /></td>
 				</tr>
+				</tbody>
 			</table>
 		</Provider>
 	}

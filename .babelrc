@@ -12,6 +12,6 @@
 	"plugins": [
 		"transform-export-extensions",
 		"transform-function-bind",
-		"transform-decorators"
+		"transform-decorators-legacy"
 	]
 }

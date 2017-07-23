@@ -1,5 +1,6 @@
 import { createStore } from 'redux'
 import scoreReducer from './score';
+import {upgradeReducer, upgradeCalc} from '../upgrades';
 
 /**
  * This is a reducer, a pure function with (state, action) => state signature.
@@ -43,6 +44,8 @@ let state = {
 };
 function reducer(state = {currentScore: 0, maxScore: 0, perSecondScore: 0, clickScore: 1}, action) {
 	let ourState = scoreReducer(state, action);
+	ourState = upgradeReducer(ourState, action);
+	ourState = upgradeCalc(ourState, action);
 	return ourState;
 }
 
@@ -59,5 +62,17 @@ export class Actions {
 		store.dispatch({
 			type: 'TICK'
 		});
+	}
+	static buy(upgradeType) {
+		store.dispatch({
+			type: 'BUY',
+			upgrade: upgradeType
+		});
+	}
+	static sell(upgradeType) {
+		store.dispatch({
+			type: 'SELL',
+			upgrade: upgradeType
+		})
 	}
 }
