@@ -3,6 +3,7 @@ import store from './redux';
 import { Provider } from 'react-redux'
 import Score from './components/score';
 import Cookie from './components/cookie';
+import {UpgradeList, UpgradePurchase} from './upgrades';
 
 export default class App extends React.Component {
 	render() {
@@ -13,8 +14,8 @@ export default class App extends React.Component {
 				</tr>
 				<tr>
 					<td><Cookie/></td>
-					<td colSpan="2">Upgrades will be here</td>
-					<td>Upgrade purchase will be here</td>
+					<td colSpan="2"><UpgradeList /></td>
+					<td><UpgradePurchase /></td>
 				</tr>
 			</table>
 		</Provider>
