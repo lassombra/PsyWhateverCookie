@@ -25341,9 +25341,10 @@ function upgradeCount() {
 		null,
 		'Cookies: ',
 		__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2__number__["a" /* default */], { number: score }),
-		', ',
+		__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('br', null),
 		__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2__number__["a" /* default */], { number: click }),
-		' per click, ',
+		' per click',
+		__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('br', null),
 		__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2__number__["a" /* default */], { number: second }),
 		' per second'
 	);

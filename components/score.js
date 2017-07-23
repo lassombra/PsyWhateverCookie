@@ -9,5 +9,5 @@ export default connect(
 		second: state.perSecondScore
 	})
 )(function score({score, click, second}) {
-	return <span>Cookies: <Number number={score} />, <Number number={click} /> per click, <Number number={second} /> per second</span>;
+	return <span>Cookies: <Number number={score} /><br /><Number number={click} /> per click<br /><Number number={second} /> per second</span>;
 });
